@@ -1,16 +1,19 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Herosection from "./components/hero/Herosection";
 import Navbar from "./components/nav/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Projects from "./components/projects/Projects";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-      {/* <Route path="/navbar" component={Navbar} /> */}
-      <Route path="/hero" component={Herosection} />
-        {/* <Herosection /> */}
+        <Routes>
+          <Route path="/" element={<Herosection />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contribution" element={<Herosection />} />
+        </Routes>
       </div>
     </Router>
   );

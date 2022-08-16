@@ -1,10 +1,10 @@
+import { SiInstagram, SiLinkedin, SiTwitter } from "react-icons/si";
+import avatar from "./../../assets/headshot-image.jpg";
 import "./Herosection.css";
-import avatar from "../../assets/headshot-image.jpg";
-import { SiTwitter, SiInstagram, SiLinkedin } from "react-icons/si";
 
 const Herosection = () => {
   return (
-    <div className="container">
+    <div className="hero-container">
       <div className="left">
         <img src={avatar} alt="avatar" />
       </div>

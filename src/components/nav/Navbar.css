@@ -6,6 +6,10 @@
     padding: 0.5rem 0rem;
 }
 
+.navigation img {
+    cursor: pointer;
+}
+
 .nav-links {
     display: flex;
     justify-content: space-around;
@@ -19,6 +23,13 @@
     background: white;
     border-radius: 12px;
     margin-right: 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.nav-links li:hover {
+    text-decoration: underline;
+    transition: all 0.3s linear;
 }
 
 .material-symbols-outlined {
