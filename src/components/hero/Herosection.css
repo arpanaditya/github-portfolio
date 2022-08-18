@@ -30,6 +30,7 @@
 .heading {
     font-weight: 700;
     margin-bottom: 0.25rem;
+    text-decoration: none;
 }
 
 .userinfo {
