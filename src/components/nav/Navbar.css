@@ -25,11 +25,7 @@
     margin-right: 1.5rem;
     cursor: pointer;
     font-weight: 500;
-}
-
-.nav-links li:hover {
-    text-decoration: underline;
-    transition: all 0.3s linear;
+    color: black;
 }
 
 .material-symbols-outlined {
