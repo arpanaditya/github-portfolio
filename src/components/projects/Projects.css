@@ -1,15 +1,17 @@
 .project-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: auto;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
 }
 
-.header {
+.header h1 {
     text-decoration: underline;
     text-align: center;
-    /* border: 2px solid red; */
+    margin-top: 1rem;
     width: 100vw;
 }
 
@@ -20,13 +22,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* border: 2px solid green; */
+    margin-top: -1rem;
 }
 
 .box {
     width: 25rem;
-    height: 10rem;
-    border: 2px solid black;
+    height: 12rem;
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
     border-radius: 25px;
@@ -34,9 +36,22 @@
     justify-content: center;
     margin-bottom: 5rem;
     font-weight: bold;
+    background: #ffdfe4;
+}
+
+.box a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .description {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 100;
+    text-align: justify;
+}
+
+.lang {
+    font-size: 1rem;
     font-weight: 100;
 }
