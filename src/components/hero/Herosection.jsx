@@ -28,10 +28,10 @@ const Herosection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SiTwitter color="black" size={35} />
+            <SiTwitter color="white" size={35} />
           </a>
           <a href={`https://${data.blog}`} target="_blank" rel="noopener noreferrer">
-            <BiLink color="black" size={35} />
+            <BiLink color="white" size={35} />
           </a>
         </div>
       </div>

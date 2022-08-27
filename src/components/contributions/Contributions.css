@@ -1,5 +1,13 @@
+div {
+    background: #121212;
+}
+
+.graph {
+    height: 75.7vh;
+}
 h1 {
     text-decoration: underline;
+    color: white;
 }
 
 .graph img {

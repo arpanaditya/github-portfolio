@@ -8,7 +8,7 @@ const Contributions = () => {
       <h1>{username}'s Contribution Graph</h1>
       <div className="graph">
         <img
-          src={`https://ghchart.rshah.org/ffdfe4/${username}`}
+          src={`https://ghchart.rshah.org/121212/${username}`}
           alt={`${username} GitHub Contribution Graph`}
         />
       </div>
