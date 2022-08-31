@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Projects.css";
-import axios from "axios";
-import { username, API_URL } from "../../components/Constant";
+// import axios from "axios";
+// import { username, API_URL } from "../../components/Constant";
 
 const Projects = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios
-      .get(`${API_URL}/users/${username}/repos`)
-      .then((res) => setData(res.data))
-      .then((error) => console.log(error));
-  }, []);
 
   return (
     <div className="project-container">
@@ -18,21 +11,18 @@ const Projects = () => {
         <h1>Projects</h1>
       </div>
       <div className="project-box">
-        {data.map((item) => {
-          return (
             <div className="box">
-              <a href={item.html_url} target="_blank" rel="noopener noreferrer">
-                {item.name}
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Project 1
               </a>
-              <p className="description">{item.description}</p>
+              <p className="description">Project Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi ut excepturi aut saepe porro aspernatur.</p>
               <p className="lang">
                 <span style={{ "font-weight": "bold" }}>Languages:</span>{" "}
-                {item.language}
+                HTML, CSS, JavaScript
               </p>
-              <p className="demo"><a href={item.homepage} target="_blank" rel="noopener noreferrer">Preview</a></p>
+              <p className="demo"><a href="#" target="_blank" rel="noopener noreferrer">Preview</a></p>
             </div>
           );
-        })}
       </div>
     </div>
   );
