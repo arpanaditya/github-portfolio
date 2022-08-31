@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { SiTwitter } from "react-icons/si";
 import { BiLink } from "react-icons/bi";
-// import avatar from "./../../assets/headshot-image.jpg";
 import "./Herosection.css";
 import { username, API_URL } from "../Constant";
 import axios from "axios";
