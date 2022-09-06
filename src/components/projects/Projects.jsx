@@ -1,30 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { apirepos } from "../Utils";
 import "./Projects.css";
-// import axios from "axios";
-// import { username, API_URL } from "../../components/Constant";
 
 const Projects = () => {
+  const [repos, setRepos] = useState(null);
 
-  return (
+  useEffect(() => {
+    apirepos().then((data) => {
+      setRepos(data);
+    });
+  }, []);
+
+  return repos ? (
     <div className="project-container">
       <div className="header">
         <h1>Projects</h1>
       </div>
       <div className="project-box">
+        {repos.map((repo) => {
+          return (
             <div className="box">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Project 1
+              <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                {repo.name}
               </a>
-              <p className="description">Project Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi ut excepturi aut saepe porro aspernatur.</p>
+              <p className="description">{repo.description}</p>
               <p className="lang">
                 <span style={{ "font-weight": "bold" }}>Languages:</span>{" "}
-                HTML, CSS, JavaScript
+                {repo.language}
               </p>
-              <p className="demo"><a href="#" target="_blank" rel="noopener noreferrer">Preview</a></p>
+              <p className="demo">
+                <a
+                  href={repo.homepage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Preview
+                </a>
+              </p>
             </div>
           );
+        })}
       </div>
     </div>
+  ) : (
+    <div>Loading...</div>
   );
 };
 
