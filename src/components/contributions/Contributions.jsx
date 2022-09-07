@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Contributions.css";
 import { username } from "../Constant";
 
 const Contributions = () => {
+
+  useEffect(() => {
+    document.title = `${username} - Contributions`
+  })
+
   return (
     <div>
       <h1>{username}'s Contribution Graph</h1>

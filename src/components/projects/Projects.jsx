@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { apirepos } from "../Utils";
 import { Watch } from "react-loader-spinner";
 import "./Projects.css";
+import { username } from "../Constant";
 
 const Projects = () => {
   const [repos, setRepos] = useState(null);
 
   useEffect(() => {
+    document.title = `${username} - Projects`
     apirepos().then((data) => {
       setRepos(data);
     });
