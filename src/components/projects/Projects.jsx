@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { apirepos } from "../Utils";
+import { Watch } from "react-loader-spinner";
 import "./Projects.css";
 
 const Projects = () => {
@@ -43,7 +44,22 @@ const Projects = () => {
       </div>
     </div>
   ) : (
-    <div>Loading...</div>
+    <Watch
+      height="200"
+      width="200"
+      radius="48"
+      color="#700B97"
+      ariaLabel="watch-loading"
+      wrapperStyle={{
+        backgroundColor: "white",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "87vh",
+      }}
+      wrapperClassName=""
+      visible={true}
+    />
   );
 };
 
