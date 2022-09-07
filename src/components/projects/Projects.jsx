@@ -1,40 +1,65 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { apirepos } from "../Utils";
+import { Watch } from "react-loader-spinner";
 import "./Projects.css";
-import axios from "axios";
-import { username, API_URL } from "../../components/Constant";
 
 const Projects = () => {
-  const [data, setData] = useState([]);
+  const [repos, setRepos] = useState(null);
+
   useEffect(() => {
-    axios
-      .get(`${API_URL}/users/${username}/repos`)
-      .then((res) => setData(res.data))
-      .then((error) => console.log(error));
+    apirepos().then((data) => {
+      setRepos(data);
+    });
   }, []);
 
-  return (
+  return repos ? (
     <div className="project-container">
       <div className="header">
         <h1>Projects</h1>
       </div>
       <div className="project-box">
-        {data.map((item) => {
+        {repos.map((repo) => {
           return (
             <div className="box">
-              <a href={item.html_url} target="_blank" rel="noopener noreferrer">
-                {item.name}
+              <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                {repo.name}
               </a>
-              <p className="description">{item.description}</p>
+              <p className="description">{repo.description}</p>
               <p className="lang">
                 <span style={{ "font-weight": "bold" }}>Languages:</span>{" "}
-                {item.language}
+                {repo.language}
               </p>
-              <p className="demo"><a href={item.homepage} target="_blank" rel="noopener noreferrer">Preview</a></p>
+              <p className="demo">
+                <a
+                  href={repo.homepage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Preview
+                </a>
+              </p>
             </div>
           );
         })}
       </div>
     </div>
+  ) : (
+    <Watch
+      height="200"
+      width="200"
+      radius="48"
+      color="#700B97"
+      ariaLabel="watch-loading"
+      wrapperStyle={{
+        backgroundColor: "white",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "87vh",
+      }}
+      wrapperClassName=""
+      visible={true}
+    />
   );
 };
 
