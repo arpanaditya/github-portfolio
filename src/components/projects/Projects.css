@@ -13,7 +13,6 @@
 .header h1 {
     color: white;
     text-decoration: underline;
-    text-align: center;
     margin-top: 1rem;
     width: 100vw;
 }
@@ -64,4 +63,30 @@
 .demo {
     font-weight: 100;
     text-align: center;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: auto; */
+    height: auto;
+    width: 0rem;
+}
+
+.searchbar {
+    margin-right: 0rem;
+    position: relative;
+    right: 25rem;
+    height: 2rem;
+    width: 15rem;
+    border-radius: 12px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 20vw;
 }

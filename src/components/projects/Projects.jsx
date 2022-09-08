@@ -6,9 +6,10 @@ import { username } from "../Constant";
 
 const Projects = () => {
   const [repos, setRepos] = useState(null);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
-    document.title = `${username} - Projects`
+    document.title = `${username} - Projects`;
     apirepos().then((data) => {
       setRepos(data);
     });
@@ -16,33 +17,50 @@ const Projects = () => {
 
   return repos ? (
     <div className="project-container">
-      <div className="header">
-        <h1>Projects</h1>
+      <div className="heading">
+        <div className="header">
+          <h1>Projects</h1>
+        </div>
+        <div className="search">
+          <input
+            type="text"
+            placeholder="Search Projects..."
+            id=""
+            className="searchbar"
+            onChange={(e) => setQuery(e.target.value)}
+          />
+        </div>
       </div>
       <div className="project-box">
-        {repos.map((repo) => {
-          return (
-            <div className="box">
-              <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                {repo.name}
-              </a>
-              <p className="description">{repo.description}</p>
-              <p className="lang">
-                <span style={{ "font-weight": "bold" }}>Languages:</span>{" "}
-                {repo.language}
-              </p>
-              <p className="demo">
+        {repos
+          .filter((repo) => repo.name.toLowerCase().includes(query))
+          .map((repo) => {
+            return (
+              <div className="box">
                 <a
-                  href={repo.homepage}
+                  href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Preview
+                  {repo.name}
                 </a>
-              </p>
-            </div>
-          );
-        })}
+                <p className="description">{repo.description}</p>
+                <p className="lang">
+                  <span style={{ "font-weight": "bold" }}>Languages:</span>{" "}
+                  {repo.language}
+                </p>
+                <p className="demo">
+                  <a
+                    href={repo.homepage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Preview
+                  </a>
+                </p>
+              </div>
+            );
+          })}
       </div>
     </div>
   ) : (
