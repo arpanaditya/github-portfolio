@@ -10,7 +10,7 @@ const Contributions = () => {
   useEffect(() => {
     document.title = `${username} - Contributions`
     setImgurl(`https://ghchart.rshah.org/${username}`);
-  })
+  }, [])
 
   return imgurl ? (
     <div>
