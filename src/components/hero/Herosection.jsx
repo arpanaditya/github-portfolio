@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BiLink } from "react-icons/bi";
 import { SiTwitter } from "react-icons/si";
 import { Watch } from "react-loader-spinner";
+import { username } from "../Constant";
 import { apidata } from "../Utils";
 import "./Herosection.css";
 
@@ -9,6 +10,7 @@ const Herosection = () => {
   const [details, setDetails] = useState(null);
 
   useEffect(() => {
+    document.title = `${username} - Home`
     apidata().then((data) => {
       setDetails(data);
     });
