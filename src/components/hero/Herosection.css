@@ -30,10 +30,11 @@
     width: 40vw;
 }
 
-.heading {
+.userhead {
     font-weight: 700;
     margin-bottom: 0.25rem;
     text-decoration: none;
+    text-align: center;
 }
 
 .userinfo {

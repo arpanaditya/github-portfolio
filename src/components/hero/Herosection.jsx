@@ -22,7 +22,7 @@ const Herosection = () => {
         <img src={details.avatar_url} alt="avatar" />
       </div>
       <div className="right">
-        <h1 className="heading">{details.name}</h1>
+        <h1 className="userhead">{details.name}</h1>
         <p className="username">(@{details.login})</p>
         <p className="userinfo">{details.bio}</p>
         <div className="socials">
