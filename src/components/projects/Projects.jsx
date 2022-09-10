@@ -34,7 +34,7 @@ const Projects = () => {
         </div>
         <div className="project-box">
           {repos
-            .filter((repo) => repo.name.toLowerCase().includes(query))
+            .filter((repo) => repo.name.toLowerCase().includes(query.toLowerCase()))
             .map((repo) => {
               return (
                 <div className="box">
