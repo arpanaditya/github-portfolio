@@ -1,10 +1,15 @@
-.App {
-  text-align: center;
+.light-theme {
+  --background-light: #f8fafc;
+  --button-color: #4f46e5;
+  --text-light: #f8fafc;
+  --text-dark: #000000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dark-theme {
+  --background-light: #0f172a;
+  --button-color: #4f46e5;
+  --text-dark: #f8fafc;
+  --text-light: #000000;
 }
 
 ::-webkit-scrollbar {

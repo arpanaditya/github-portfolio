@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from "react";
-import "./Contributions.css";
-import { username } from "../Constant";
 import { Watch } from "react-loader-spinner";
+import { username } from "../Constant";
+import "./Contributions.css";
 
 const Contributions = () => {
-
   const [imgurl, setImgurl] = useState(null);
 
   useEffect(() => {
-    document.title = `${username} - Contributions`
+    document.title = `${username} - Contributions`;
     setImgurl(`https://ghchart.rshah.org/${username}`);
-  }, [])
+  }, []);
 
   return imgurl ? (
-    <div>
+    <div className="graph-container">
       <h1>{username}'s Contribution Graph</h1>
       <div className="graph">
-        <img
-          src={imgurl}
-          alt={`${username} GitHub Contribution Graph`}
-        />
+        <img src={imgurl} alt={`${username} GitHub Contribution Graph`} />
       </div>
     </div>
   ) : (
@@ -27,7 +23,7 @@ const Contributions = () => {
       height="200"
       width="200"
       radius="48"
-      color="#700B97"
+      color="#4f46e5"
       ariaLabel="watch-loading"
       wrapperStyle={{
         backgroundColor: "white",

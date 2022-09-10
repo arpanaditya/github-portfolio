@@ -9,7 +9,7 @@ const Projects = () => {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    document.title = `${username} - Projects`
+    document.title = `${username} - Projects`;
     apirepos().then((data) => {
       setRepos(data);
     });
@@ -34,7 +34,9 @@ const Projects = () => {
         </div>
         <div className="project-box">
           {repos
-            .filter((repo) => repo.name.toLowerCase().includes(query.toLowerCase()))
+            .filter((repo) =>
+              repo.name.toLowerCase().includes(query.toLowerCase())
+            )
             .map((repo) => {
               return (
                 <div className="box">
@@ -70,7 +72,7 @@ const Projects = () => {
       height="200"
       width="200"
       radius="48"
-      color="#700B97"
+      color="#4f46e5"
       ariaLabel="watch-loading"
       wrapperStyle={{
         backgroundColor: "white",
