@@ -9,7 +9,7 @@ const Projects = () => {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    document.title = `${username} - Projects`;
+    document.title = `${username} - Projects`
     apirepos().then((data) => {
       setRepos(data);
     });
