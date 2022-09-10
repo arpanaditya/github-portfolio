@@ -6,23 +6,29 @@
   align-items: center;
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
-  background: #121212;
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  background: var(--background-light);
 }
 
 .container {
   overflow-y: scroll;
+  background-color: var(--background-light);
 }
 
-.container::-webkit-scrollbar { 
-    display: none;
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  background-color: var(--background-light);
 }
 
 .header h1 {
   color: white;
   padding-left: 5rem;
+  color: var(--text-dark);
 }
 
 .project-box {
@@ -33,6 +39,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: -1rem;
+  background-color: var(--background-light);
 }
 
 .box {
@@ -46,26 +53,26 @@
   align-items: center;
   margin-bottom: 3rem;
   font-weight: bold;
-  background: #8e05c2;
+  background: var(--button-color);
 }
 
 .box a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: white;
+  color: #f8fafc;
 }
 
 .description {
   font-size: 0.9rem;
   font-weight: 100;
   text-align: center;
-  color: white;
+  color: #f8fafc;
 }
 
 .lang {
   font-size: 1rem;
   font-weight: 100;
-  color: white;
+  color: #f8fafc;
 }
 
 .demo {
@@ -80,6 +87,7 @@
   height: auto;
   width: 25%;
   padding-right: 5rem;
+  background-color: var(--background-light);
 }
 
 .searchbar {
@@ -102,4 +110,5 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--background-light);
 }

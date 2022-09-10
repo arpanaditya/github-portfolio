@@ -1,51 +1,63 @@
 .hero-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    background: #121212;
-    color: white;
-    height: 88vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  background: var(--background-light);
+  height: 88vh;
 }
 
 .left {
-    height: 86vh;
-    width: 30vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 86vh;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-light);
 }
 
 .left img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-    width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 40vw;
+  background-color: var(--background-light);
 }
 
 .userhead {
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-    text-decoration: none;
-    text-align: center;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: none;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.username {
+  color: var(--text-dark);
 }
 
 .userinfo {
-    font-weight: 400;
-    margin-top: 0.25rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+  color: var(--text-dark);
 }
 
 .socials {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: var(--background-light);
+}
+
+.socials > a {
+  color: var(--text-dark);
 }

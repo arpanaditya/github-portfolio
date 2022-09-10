@@ -10,7 +10,7 @@ const Herosection = () => {
   const [details, setDetails] = useState(null);
 
   useEffect(() => {
-    document.title = `${username} - Home`
+    document.title = `${username} - Home`;
     apidata().then((data) => {
       setDetails(data);
     });
@@ -31,14 +31,14 @@ const Herosection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SiTwitter color="white" size={35} />
+            <SiTwitter size={35} />
           </a>
           <a
             href={`https://${details.blog}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BiLink color="white" size={35} />
+            <BiLink size={35} />
           </a>
         </div>
       </div>
@@ -48,7 +48,7 @@ const Herosection = () => {
       height="200"
       width="200"
       radius="48"
-      color="#700B97"
+      color="#4f46e5"
       ariaLabel="watch-loading"
       wrapperStyle={{
         backgroundColor: "white",
