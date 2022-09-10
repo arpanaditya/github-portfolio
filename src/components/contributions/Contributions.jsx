@@ -7,8 +7,6 @@ import "./Contributions.css";
 const Contributions = () => {
   const [imgurl, setImgurl] = useState(null);
 
-  const [imgurl, setImgurl] = useState(null);
-
   useEffect(() => {
     document.title = `${username} - Contributions`;
     setImgurl(`https://ghchart.rshah.org/${username}`);
