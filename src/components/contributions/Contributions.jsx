@@ -3,7 +3,10 @@ import { Watch } from "react-loader-spinner";
 import { username } from "../Constant";
 import "./Contributions.css";
 
+
 const Contributions = () => {
+  const [imgurl, setImgurl] = useState(null);
+
   const [imgurl, setImgurl] = useState(null);
 
   useEffect(() => {
