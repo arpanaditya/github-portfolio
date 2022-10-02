@@ -1,8 +1,8 @@
 .light-theme {
-  --background-light: #f8fafc;
+  --background-light: #ffffff;
   --button-color: #4f46e5;
-  --text-light: #f8fafc;
-  --text-dark: #000000;
+  --text-light: #f8f8f8;
+  --text-dark: #1a1a1a;
 }
 
 .dark-theme {

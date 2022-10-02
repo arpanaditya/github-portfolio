@@ -1,5 +1,6 @@
 .hero-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   font-family: "Roboto", sans-serif;
@@ -9,15 +10,17 @@
 }
 
 .left {
-  height: 86vh;
-  width: 30vw;
+ 
+ 
   display: flex;
+  
   justify-content: center;
   align-items: center;
   background-color: var(--background-light);
 }
 
 .left img {
+
   border-radius: 50%;
 }
 
@@ -32,7 +35,7 @@
 }
 
 .userhead {
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 0.25rem;
   text-decoration: none;
   text-align: center;
@@ -51,6 +54,7 @@
 
 .socials {
   display: flex;
+  
   justify-content: space-evenly;
   align-items: center;
   width: 100%;

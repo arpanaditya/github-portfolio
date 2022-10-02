@@ -45,6 +45,7 @@
 .box {
   width: 25rem;
   height: 14rem;
+  box-shadow: 5px 1px 20px var(--button-color);
   display: flex;
   flex-direction: column;
   border-radius: 25px;
@@ -54,6 +55,7 @@
   margin-bottom: 3rem;
   font-weight: bold;
   background: var(--button-color);
+  
 }
 
 .box a {
