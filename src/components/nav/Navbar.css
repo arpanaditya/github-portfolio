@@ -1,9 +1,12 @@
 .navigation {
+  padding-top: 40px;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   background: var(--background-light);
-  padding: 0.5rem 0rem;
+ 
+ 
 }
 
 .navigation img {
@@ -19,15 +22,26 @@
 }
 
 .nav-links li {
-  padding: 0.5rem 2rem;
+ padding: 10px 25px;
+
   background: var(--button-color);
-  border-radius: 12px;
+  border-radius: 8px;
   margin-right: 1.5rem;
   cursor: pointer;
   font-weight: 500;
-  color: #f8fafc;
+  color: #eeeeee;
 }
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 100, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+@media screen and (max-width: 800px) {
+  .navigation {
+    display: flex;
+    border-bottom: 1px solid rgba(48, 48, 48, 0.125);  
+      flex-direction: column;
+  
+    
+  }
+  
 }
