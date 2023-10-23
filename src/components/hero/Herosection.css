@@ -1,26 +1,16 @@
 .hero-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
   background: var(--background-light);
-  height: 88vh;
+  padding: 5%;
 }
 
-.left {
- 
- 
-  display: flex;
-  
-  justify-content: center;
-  align-items: center;
-  background-color: var(--background-light);
-}
 
 .left img {
-
+  max-width: 75%; 
+  height: auto;    
   border-radius: 50%;
 }
 
