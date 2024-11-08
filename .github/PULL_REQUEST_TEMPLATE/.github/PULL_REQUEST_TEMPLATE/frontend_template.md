@@ -1,4 +1,4 @@
-# Backend Template
+# frontend template
 
 ## PR Title
 **Format Reminder**: Use a title that matches the Conventional Commit syntax and includes the JIRA/task ID:
